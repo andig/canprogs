@@ -1,0 +1,41 @@
+
+opath=$PATH
+export PATH=/Users/jurgmuller/Documents/develop/toolchains/ARMx-2009q3-67/bin:${PATH}
+ARCH=arm 
+export CROSS_COMPILE=arm-none-linux-gnueabi-
+
+# ${CROSS_COMPILE}g++ -v
+
+# echo "elster"
+# ./can_elster.arm
+
+# echo "elster_perl"
+# ./can_elster_perl.arm
+
+echo "logger $1 $2"
+./can_logger.arm $1 $2
+
+echo "scan $1 $2"
+./can_scan.arm $1 $2
+
+echo "server"
+./can_server.arm
+
+echo "vz"
+./can_vz.arm
+
+echo "cgi"
+./can_cgi.arm
+
+echo "cs_bruecke"
+./cs_bruecke.arm
+
+# echo "elster_php"
+# ./can_elster_php.arm
+
+export path=$opath
+
+
+
+
+

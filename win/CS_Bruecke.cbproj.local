@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="..\..\can_progs"/>
+    <File Path="..\special"/>
+    <File Path="..\special\Kusb2can.cpp"/>
+    <File Path="..\KCanCommDriver.cpp"/>
+    <File Path="..\KCanDriver.cpp"/>
+    <File Path="..\KCanElster.cpp"/>
+    <File Path="..\KCanServer.cpp"/>
+    <File Path="..\KComm.cpp"/>
+    <File Path="..\KCriticalSection.cpp"/>
+    <File Path="..\KElsterTable.cpp"/>
+    <File Path="..\KIpSocket.cpp"/>
+    <File Path="..\KScanTable.cpp"/>
+    <File Path="..\KTcpCanClient.cpp"/>
+    <File Path="..\KTcpClient.cpp"/>
+    <File Path="..\KThread.cpp"/>
+    <File Path="..\NCanUtils.cpp"/>
+    <File Path="..\NUtils.cpp"/>
+    <File Path="..\UBruecke.cpp"/>
+    <File Path="Comm.pas"/>
+    <File Path="Console.pas"/>
+    <File Path="CS_Bruecke.cpp"/>
+    <File Path="KCommVCL.cpp"/>
+    <File Path="UCS_Dlg.cpp"/>
+    <File Path="UCS_Dlg.cpp"/>
+    <File Path="UCS_Dlg.dfm"/>
+    <File Path="UCS_Dlg.h"/>
+  </ProjectSortOrder>
+</BorlandProject>

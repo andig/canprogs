@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <script>
+      $(function() {
+        $( "#tabs" ).tabs();
+        });
+    </script>
+  </head>
+  <form action="can_cgi" method="get">
+  <body>
+    <font face="Arial">
+      <b>Werte</b><br><br>
+      <table border="1">
+        <tr>
+          <td>Aussentemp.</th>
+          <td align="right" >${180.AUSSENTEMP} &deg;C</th>
+        </tr>
+        <tr>
+          <td>Speicher-Soll-Temp.</th>
+          <td align="right" >${180.SPEICHERSOLLTEMP} &deg;C</th>
+        </tr>
+        <tr>
+          <td>Speicher-Ist-Temp.</th>
+            <td align="right" >${180.SPEICHERISTTEMP} &deg;C</th>
+        </tr>
+        <tr>
+          <td>Vorlauf-Soll-Temp.</th>
+           <td align="right" >${180.VORLAUFSOLLTEMP} &deg;C</th>
+        </tr>
+        <tr>
+          <td>Vorlauf-Ist-Temp.</th>
+          <td align="right" >${180:000f} &deg;C</th>
+        </tr>
+        <tr>
+          <td>R&uuml;cklauftemp.</td>
+          <td align="right" >${180.RUECKLAUFISTTEMP} &deg;C</td>
+        </tr>
+        <tr>
+          <td>Verdichter</td>
+          <td align="right" >${500:07a8} %</td>
+        </tr>
+      </table>
+      <br><br>
+      <b>Energie</b><br><br>
+      <table border="1" >
+        <tr>
+          <th></th>
+          <th>elektrische Aufnahme</th>
+          <th>W&auml;rmeertrag</th>
+        </tr>
+        <tr>
+          <td>Warmwasser pro Tag</td>
+          <td align="right" >${500.EL_AUFNAHMELEISTUNG_WW_TAG_KWH} kWh</td>
+          <td align="right" >${500.WAERMEERTRAG_WW_TAG_KWH} kWh</td>
+        </tr>
+        <tr>
+          <td>Heizung pro Tag</td>
+          <td align="right" >${500.EL_AUFNAHMELEISTUNG_HEIZ_TAG_KWH} kWh</td>
+          <td align="right" >${500.WAERMEERTRAG_HEIZ_TAG_KWH} kWh</td>
+        </tr>
+        <tr>
+          <td>Warmwasser Summe</td>
+          <td align="right" >${500.EL_AUFNAHMELEISTUNG_WW_SUM_MWH} MWh</td>
+          <td align="right" >${500.WAERMEERTRAG_WW_SUM_MWH} MWh</td>
+        </tr>
+        <tr>
+          <td>Heizung Summe</td>
+          <td align="right" >${500.EL_AUFNAHMELEISTUNG_HEIZ_SUM_MWH} MWh</td>
+          <td align="right" >${500.WAERMEERTRAG_HEIZ_SUM_MWH} MWh</td>
+        </tr>        
+      </table>
+    </font>
+  </body>
+  </form>
+</html>
+

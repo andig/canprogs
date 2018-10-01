@@ -1,0 +1,22 @@
+
+g++ -Wall -D__LINUX__ -D__MAC__ -D__64__ -D__CONSOLE__ -D__DEBUG__ -D__CAN__ -D__NO_VCL__ -lc -lpthread \
+  ../KIpSocket.cpp \
+  ../KThread.cpp \
+  ../KCriticalSection.cpp \
+  ../KTcpClient.cpp \
+  ../KTcpCanClient.cpp \
+  ../KCanDriver.cpp \
+  ../KComm.cpp \
+  ../KCanCommDriver.cpp \
+  ../KRPiCanDriver.cpp \
+  ../KCanServer.cpp \
+  ../KStream.cpp \
+  ../NUtils.cpp \
+  ../NCanUtils.cpp \
+  ../KElsterTable.cpp \
+  ../KCanElster.cpp \
+  ../UBruecke.cpp \
+  ../KScanTable.cpp \
+  ../KSniffedFrame.cpp \
+  ../KCanTcpDriver.cpp \
+  -o cs_bruecke

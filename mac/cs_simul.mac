@@ -1,0 +1,23 @@
+rm cs_simul
+
+${CROSS_COMPILE}g++ -Wall -D__LINUX__ -D__MAC__ -D__64__ -D__CONSOLE__ -D__CAN__ -D__NO_VCL__ -lc -lpthread \
+  ../KIpSocket.cpp \
+  ../KThread.cpp \
+  ../KCriticalSection.cpp \
+  ../KCanDriver.cpp \
+  ../KComm.cpp \
+  ../KRPiCanDriver.cpp \
+  ../KCanServer.cpp \
+  ../KStream.cpp \
+  ../NUtils.cpp \
+  ../NCanUtils.cpp \
+  ../KElsterTable.cpp \
+  ../KScanTable.cpp \
+  ../KCanElster.cpp \
+  ../UBruecke.cpp \
+  ../KTcpClient.cpp \
+  ../KCanCommDriver.cpp \
+  ../KTcpCanClient.cpp \
+  ../KCanTcpDriver.cpp \
+  ../KSniffedFrame.cpp \
+  -o cs_simul

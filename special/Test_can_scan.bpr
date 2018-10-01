@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="Test_can_scan.exe"/>
+    <OBJFILES value="..\win\obj\NUtils.obj ..\win\obj\NCanUtils.obj 
+      ..\win\obj\KRPiCanDriver.obj ..\win\obj\KCanCommDriver.obj 
+      ..\win\obj\KCanDriver.obj ..\win\obj\KIpSocket.obj 
+      ..\win\obj\KXmlNodeList.obj ..\win\obj\KComm.obj ..\win\obj\KTcpClient.obj 
+      ..\win\obj\KStream.obj ..\win\obj\KCanServer.obj ..\win\obj\KThread.obj 
+      ..\win\obj\KCriticalSection.obj ..\win\obj\KHttpClient.obj 
+      ..\win\obj\KElsterTable.obj ..\win\obj\XmlParser.obj 
+      ..\win\obj\Kusb2can.obj ..\win\obj\KCanElster.obj ..\win\obj\KScanTable.obj"/>
+    <RESFILES value="Test_can_scan.res"/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES)"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value=""/>
+    <SPARELIBS value=""/>
+    <PACKAGES value="vcl.bpi rtl.bpi vclx.bpi bcbsmp.bpi dclocx.bpi"/>
+    <PATHCPP value=".;..;..;..;..;..;..;..;..;..;..;..;..;..;..;..;..;..;.."/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value="_DEBUG;__WINDOWS__;__CAN__;__SCAN__"/>
+    <SYSDEFINES value="NO_STRICT;_NO_VCL;_RTLDLL;USEPACKAGES"/>
+    <MAINSOURCE value="Test_can_scan.bpf"/>
+    <INCLUDEPATH value="..\;special;..;D:\CC\framework\can_progs\special;$(BCB)\include;$(BCB)\include\vcl"/>
+    <LIBPATH value="..\;special;..;D:\CC\framework\can_progs\special;$(BCB)\lib\obj;$(BCB)\lib"/>
+    <WARNINGS value="-w-par"/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <CFLAG1 value="-Od -H=$(BCB)\lib\vcl60.csm -Hc -Vx -Ve -X- -r- -a8 -b- -k -y -v -vi- -tWC 
+      -tWM -c"/>
+    <PFLAGS value="-N2..\win\obj -N0..\win\obj -$YD -$W -$O- -$A8 -v -JPHNE -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zd"/>
+    <LFLAGS value="-I..\win\obj -D&quot;&quot; -ap -Tpe -x -Gn -v"/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0x32.obj $(PACKAGES) $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cw32mti.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="Test_can_scan.res" FORMNAME="" UNITNAME="Test_can_scan.res" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Test_can_scan.bpf" FORMNAME="" UNITNAME="Test_can_scan" CONTAINERID="BPF" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\NUtils.cpp" FORMNAME="" UNITNAME="NUtils" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\NCanUtils.cpp" FORMNAME="" UNITNAME="NCanUtils" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\KRPiCanDriver.cpp" FORMNAME="" UNITNAME="KRPiCanDriver" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\KCanCommDriver.cpp" FORMNAME="" UNITNAME="KCanCommDriver" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\KCanDriver.cpp" FORMNAME="" UNITNAME="KCanDriver" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\KIpSocket.cpp" FORMNAME="" UNITNAME="KIpSocket" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\KXmlNodeList.cpp" FORMNAME="" UNITNAME="KXmlNodeList" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\KComm.cpp" FORMNAME="" UNITNAME="KComm" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\KTcpClient.cpp" FORMNAME="" UNITNAME="KTcpClient" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\KStream.cpp" FORMNAME="" UNITNAME="KStream" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\KCanServer.cpp" FORMNAME="" UNITNAME="KCanServer" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\KThread.cpp" FORMNAME="" UNITNAME="KThread" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\KCriticalSection.cpp" FORMNAME="" UNITNAME="KCriticalSection" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\KHttpClient.cpp" FORMNAME="" UNITNAME="KHttpClient" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\KElsterTable.cpp" FORMNAME="" UNITNAME="KElsterTable" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\XmlParser.cpp" FORMNAME="" UNITNAME="XmlParser" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Kusb2can.cpp" FORMNAME="" UNITNAME="Kusb2can" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\KCanElster.cpp" FORMNAME="" UNITNAME="KCanElster" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\KScanTable.cpp" FORMNAME="" UNITNAME="KScanTable" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=0
+AutoIncBuild=0
+MajorVer=1
+MinorVer=0
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=2055
+CodePage=1252
+
+[Version Info Keys]
+CompanyName=
+FileDescription=
+FileVersion=1.0.0.0
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+Comments=
+
+[HistoryLists\hlIncludePath]
+Count=3
+Item0=..\;..;D:\CC\framework\can_progs\special;$(BCB)\include;$(BCB)\include\vcl
+Item1=..\;D:\CC\framework\can_progs\special;$(BCB)\include;$(BCB)\include\vcl
+Item2=D:\CC\framework\can_progs\special;$(BCB)\include;$(BCB)\include\vcl
+
+[HistoryLists\hlLibraryPath]
+Count=3
+Item0=..\;..;D:\CC\framework\can_progs\special;$(BCB)\lib\obj;$(BCB)\lib
+Item1=..\;D:\CC\framework\can_progs\special;$(BCB)\lib\obj;$(BCB)\lib
+Item2=D:\CC\framework\can_progs\special;$(BCB)\lib\obj;$(BCB)\lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlConditionals]
+Count=3
+Item0=_DEBUG;__WINDOWS__;__CAN__;__SCAN__
+Item1=_DEBUG;__WINDOWS__;__CAN__
+Item2=_DEBUG
+
+[HistoryLists\hlIntOutputDir]
+Count=1
+Item0=..\win\obj
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=ED000200 680 180.000b trace
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+  </IDEOPTIONS>
+</PROJECT>

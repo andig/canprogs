@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<VZ>
+  <!-- supported formats (ElsterTable.inc):
+           et_dec_val       signed short / 10.0 (Auflösung: xx.x)
+           et_byte          signed char
+           et_little_endian
+           et_zeit
+           et_datum
+  -->
+  <device     Name="can0" />
+  <!-- Die beiden "%s" sind Platzhalter für die UUID und den Wert. Sie dürfen nicht entfernt werden! -->
+  <template   Name="GET /htdocs/middleware.php/data/%s.json?operation=add&amp;value=%s HTTP/1.1" />
+  <ip_address Name="volkszaehler.org" /> 
+  <!-- sleep in seconds -->
+  <sleep      Name="104" /> 
+  <channel    Name="Rücklaufist"
+              uuid="einzusetzen"           
+              can_inst="180.0016" /> 
+  <channel    Name="Aussentemperatur"
+              uuid="einzusetzen"           
+              can_inst="180.000c" />
+  <channel    Name="Verdichter"
+              uuid="einzusetzen"           
+              can_msg="a1 00 fa 07 a8" 
+              format="et_dec_val" /> 
+</VZ>

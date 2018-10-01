@@ -1,0 +1,23 @@
+rm cs_bruecke
+
+${CROSS_COMPILE}g++ -Wall -D__LINUX__ -D__ARM__ -D__CONSOLE__ -D__CAN__ -D__NO_VCL__ -lc -lpthread \
+  KIpSocket.cpp \
+  KThread.cpp \
+  KCriticalSection.cpp \
+  KCanDriver.cpp \
+  KComm.cpp \
+  KRPiCanDriver.cpp \
+  KCanCommDriver.cpp \
+  KCanServer.cpp \
+  KStream.cpp \
+  NUtils.cpp \
+  NCanUtils.cpp \
+  KElsterTable.cpp \
+  KScanTable.cpp \
+  KCanElster.cpp \
+  KTcpClient.cpp \
+  KTcpCanClient.cpp \
+  KSniffedFrame.cpp \
+  KCanTcpDriver.cpp \
+  UBruecke.cpp \
+  -o cs_bruecke

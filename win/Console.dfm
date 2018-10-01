@@ -1,0 +1,25 @@
+object ConsoleWnd: TConsoleWnd
+  Left = 441
+  Top = 165
+  HorzScrollBar.Tracking = True
+  VertScrollBar.Tracking = True
+  ClientHeight = 273
+  ClientWidth = 427
+  Color = clWhite
+  Font.Charset = ANSI_CHARSET
+  Font.Color = clBlack
+  Font.Height = -12
+  Font.Name = 'Fixedsys'
+  Font.Pitch = fpFixed
+  Font.Style = []
+  OldCreateOrder = True
+  Position = poDefault
+  OnKeyDown = FormKeyDown
+  OnKeyPress = FormKeyPress
+  OnMouseDown = FormMouseDown
+  OnMouseWheel = FormMouseWheel
+  OnResize = FormResize
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 15
+end

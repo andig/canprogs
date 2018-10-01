@@ -1,0 +1,191 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="CS_Bruecke.exe"/>
+    <OBJFILES value="obj\Comm.obj obj\KCanDriver.obj obj\KCanElster.obj obj\KCanServer.obj 
+      obj\KComm.obj obj\KCriticalSection.obj obj\KElsterTable.obj 
+      obj\KIpSocket.obj obj\KScanTable.obj obj\KTcpCanClient.obj obj\KThread.obj 
+      obj\NCanUtils.obj obj\UCS_Dlg.obj obj\UMain.obj obj\KStream.obj 
+      obj\KTcpClient.obj obj\UBruecke.obj obj\KCommVCL.obj 
+      obj\KCanCommDriver.obj obj\NUtils.obj obj\Kusb2can.obj 
+      obj\KSniffedFrame.obj obj\KCanTcpDriver.obj"/>
+    <RESFILES value="CS_Bruecke.res"/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES) UCS_Dlg.dfm"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value="dclocx.lib bcbsmp.lib rtl.lib vcl.lib"/>
+    <SPARELIBS value="vcl.lib rtl.lib bcbsmp.lib dclocx.lib"/>
+    <PACKAGES value="vcl.bpi rtl.bpi vclx.bpi bcbsmp.bpi dclocx.bpi"/>
+    <PATHCPP value=".;..;..;..;..;..;..;..;..;..;..;..;..;..;..;..;..;..\special;..;.."/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value="__CAN__;__WINDOWS__;VCL;__NOCOMMDLG__;_DEBUG"/>
+    <SYSDEFINES value="NO_STRICT"/>
+    <MAINSOURCE value="CS_Bruecke.bpf"/>
+    <INCLUDEPATH value="..\;..;..\special;C:\Programme\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;win;."/>
+    <LIBPATH value="..\;..;..\special;C:\Programme\Borland\CBuilder6\Projects;$(BCB)\lib\obj;$(BCB)\lib;win;obj;C:\WINNT\system32"/>
+    <WARNINGS value="-w-par"/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <CFLAG1 value="-Od -w -Vx -Ve -xp -X- -r- -a8 -b- -k -y -v -vi- -tWC -tWM -c"/>
+    <PFLAGS value="-N2./obj -N0./obj -$Y+ -$W -$O- -$A8 -v -JPHNE -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zd"/>
+    <LFLAGS value="-I./obj -D&quot;&quot; -H:0x1000000 -Hc:0x80000 -S:0x1000000 -Sc:0x80000 -ap -Tpe -x 
+      -Gn -v"/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0x32.obj sysinit.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cp32mt.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="Comm.pas" FORMNAME="" UNITNAME="Comm" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="CS_Bruecke.res" FORMNAME="" UNITNAME="CS_Bruecke.res" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="CS_Bruecke.bpf" FORMNAME="" UNITNAME="CS_Bruecke" CONTAINERID="BPF" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\KCanDriver.cpp" FORMNAME="" UNITNAME="KCanDriver" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\KCanElster.cpp" FORMNAME="" UNITNAME="KCanElster" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\KCanServer.cpp" FORMNAME="" UNITNAME="KCanServer" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\KComm.cpp" FORMNAME="" UNITNAME="KComm" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\KCriticalSection.cpp" FORMNAME="" UNITNAME="KCriticalSection" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\KElsterTable.cpp" FORMNAME="" UNITNAME="KElsterTable" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\KIpSocket.cpp" FORMNAME="" UNITNAME="KIpSocket" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\KScanTable.cpp" FORMNAME="" UNITNAME="KScanTable" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\KTcpCanClient.cpp" FORMNAME="" UNITNAME="KTcpCanClient" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\KThread.cpp" FORMNAME="" UNITNAME="KThread" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\NCanUtils.cpp" FORMNAME="" UNITNAME="NCanUtils" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="UCS_Dlg.cpp" FORMNAME="Form1" UNITNAME="UCS_Dlg" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="UMain.cpp" FORMNAME="" UNITNAME="UMain" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\KStream.cpp" FORMNAME="" UNITNAME="KStream" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\KTcpClient.cpp" FORMNAME="" UNITNAME="KTcpClient" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\UBruecke.cpp" FORMNAME="" UNITNAME="UBruecke" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="KCommVCL.cpp" FORMNAME="" UNITNAME="KCommVCL" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\KCanCommDriver.cpp" FORMNAME="" UNITNAME="KCanCommDriver" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\NUtils.cpp" FORMNAME="" UNITNAME="NUtils" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\special\Kusb2can.cpp" FORMNAME="" UNITNAME="Kusb2can" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\KSniffedFrame.cpp" FORMNAME="" UNITNAME="KSniffedFrame" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\KCanTcpDriver.cpp" FORMNAME="" UNITNAME="KCanTcpDriver" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=0
+AutoIncBuild=0
+MajorVer=1
+MinorVer=0
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=2055
+CodePage=1252
+
+[Version Info Keys]
+CompanyName=
+FileDescription=
+FileVersion=1.0.0.0
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+Comments=
+
+[HistoryLists\hlIncludePath]
+Count=14
+Item0=..\;..;..\special;C:\Programme\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;win;.
+Item1=..\;..\special;..;C:\Programme\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;win;.
+Item2=..\special;..\;..;C:\Programme\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;win;.
+Item3=..\;..;C:\Programme\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;win;.
+Item4=..\;C:\Programme\Borland\CBuilder6\Projects;..;$(BCB)\include;$(BCB)\include\vcl;win;.
+Item5=C:\Programme\Borland\CBuilder6\Projects;..\;..;$(BCB)\include;$(BCB)\include\vcl;win;.
+Item6=..\;..;$(BCB)\include;$(BCB)\include\vcl;win;.
+Item7=..\;..;$(BCB)\include;$(BCB)\include\vcl;win;.\
+Item8=..\;..;$(BCB)\include;$(BCB)\include\vcl;win
+Item9=..\;..;$(BCB)\include;$(BCB)\include\vcl
+Item10=..\;$(BCB)\include;$(BCB)\include\vcl
+Item11=..\;..;..\..\test;..\can_progs;D:\Data\MySource;$(BCB)\include;$(BCB)\include\vcl
+Item12=..\;..\..\test;..\can_progs;D:\Data\MySource;$(BCB)\include;$(BCB)\include\vcl
+Item13=..\can_progs;D:\Data\MySource;$(BCB)\include;$(BCB)\include\vcl
+
+[HistoryLists\hlLibraryPath]
+Count=14
+Item0=..\;..;..\special;C:\Programme\Borland\CBuilder6\Projects;$(BCB)\lib\obj;$(BCB)\lib;win;obj;C:\WINNT\system32
+Item1=..\;..\special;..;C:\Programme\Borland\CBuilder6\Projects;$(BCB)\lib\obj;$(BCB)\lib;win;obj;C:\WINNT\system32
+Item2=..\special;..\;..;C:\Programme\Borland\CBuilder6\Projects;$(BCB)\lib\obj;$(BCB)\lib;win;obj;C:\WINNT\system32
+Item3=..\;..;C:\Programme\Borland\CBuilder6\Projects;$(BCB)\lib\obj;$(BCB)\lib;win;obj;C:\WINNT\system32
+Item4=..\;..;C:\Programme\Borland\CBuilder6\Projects;$(BCB)\lib\obj;$(BCB)\lib;win;obj
+Item5=..\;C:\Programme\Borland\CBuilder6\Projects;..;$(BCB)\lib\obj;$(BCB)\lib;win;obj
+Item6=C:\Programme\Borland\CBuilder6\Projects;..\;..;$(BCB)\lib\obj;$(BCB)\lib;win;obj
+Item7=..\;..;$(BCB)\lib\obj;$(BCB)\lib;win;obj
+Item8=..\;..;$(BCB)\lib\obj;$(BCB)\lib;win
+Item9=..\;..;$(BCB)\lib\obj;$(BCB)\lib
+Item10=..\;$(BCB)\lib\obj;$(BCB)\lib
+Item11=..\;..;..\..\test;..\can_progs;D:\Data\MySource;$(BCB)\lib\obj;$(BCB)\lib
+Item12=..\;..\..\test;..\can_progs;D:\Data\MySource;$(BCB)\lib\obj;$(BCB)\lib
+Item13=..\can_progs;D:\Data\MySource;$(BCB)\lib\obj;$(BCB)\lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlConditionals]
+Count=18
+Item0=__CAN__;__WINDOWS__;VCL;__NOCOMMDLG__;_DEBUG
+Item1=__CAN__;__WINDOWS__;VCL;__NOCOMMDLG__
+Item2=__CAN__;__WINDOWS__;VCL;__USBTIN__;__NOCOMMDLG__;_DEBUG
+Item3=__CAN__;__WINDOWS__;VCL;__USBTIN__;__NOCOMMDLG__
+Item4=__CAN__;__WINDOWS__;VCL;__USBTIN__;_DEBUG;__NOCOMMDLG__
+Item5=__CAN__;__WINDOWS__;VCL;__USBTIN__;_DEBUG
+Item6=__CAN__;__WINDOWS__;VCL;__USBTIN__
+Item7=__CAN__;__WINDOWS__;VCL;__USBTIN_SIMULATION__
+Item8=__CAN__;__WINDOWS__;VCL;_DEBUG;__USBTIN_SIMULATION__
+Item9=__CAN__;__WINDOWS__;VCL;_DEBUG
+Item10=__CAN__;__WINDOWS__;VCL
+Item11=__CAN__;__WINDOWS__;VCL;_DEBUG;USE_KCOMM
+Item12=__CAN__;__WINDOWS__;_DEBUG;VCL
+Item13=__CAN__;__WINDOWS__;_DEBUG
+Item14=__CAN__;__WINDOWS__
+Item15=_DEBUG;__CAN__;__WINDOWS__;VCL
+Item16=_DEBUG;__CAN__;__WINDOWS__
+Item17=_DEBUG
+
+[HistoryLists\hlIntOutputDir]
+Count=1
+Item0=./obj
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+  </IDEOPTIONS>
+</PROJECT>

@@ -1,0 +1,33 @@
+
+# cp ../elster_php.cpp .
+cp ../elster_php.h .
+cp ../elster_php.i .
+
+/usr/local/bin/swig -php -module elster_php -c++ elster_php.i
+
+CORE_PATH="/usr/bin/php"
+
+g++ -dynamiclib -Wall -D__LINUX__ -D__MAC__ -D__CONSOLE__ -D__CAN__ -D__64__ -DSWIG \
+  -I/usr/include/php/zend -I/usr/include/php/TSRM -I/usr/include/php -I/usr/include/php/main -lc -lpthread -ldl -undefined dynamic_lookup \
+  elster_php_wrap.cpp \
+  ../elster_php.cpp \
+  ../elster_instance.cpp \
+  ../KIpSocket.cpp \
+  ../KThread.cpp \
+  ../KCriticalSection.cpp \
+  ../KRPiCanDriver.cpp \
+  ../KCanDriver.cpp \
+  ../KComm.cpp \
+  ../KCanCommDriver.cpp \
+  ../KCanServer.cpp \
+  ../KStream.cpp \
+  ../NUtils.cpp \
+  ../NCanUtils.cpp \
+  ../KElsterTable.cpp \
+  ../KScanTable.cpp \
+  ../KCanElster.cpp \
+  ../KSniffedFrame.cpp \
+  ../KCanTcpDriver.cpp \
+  ../KTcpClient.cpp \
+  -o elster_php.dylib
+  

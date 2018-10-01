@@ -1,0 +1,45 @@
+#
+# funktioniert leider noch nicht: elster_perl.dylib kann erzeugt, aber von perl nicht geladen werden!
+# Das Modul müsste vermutlich mit demselben Compiler erzeugt werden, mit dem auch Perl gebildet wurde.
+#
+
+# cp ../elster_perl.cpp .
+cp ../elster_perl.h .
+cp ../elster_perl.i .
+
+/usr/local/bin/swig -perl5 -module elster_perl -c++ elster_perl.i
+
+CORE_PATH="/opt/local/lib/perl5/5.22/darwin-thread-multi-2level/CORE"
+
+# -g: aktiviert das Debugging
+g++ -dynamiclib -g -Wall -D__LINUX__ -D__MAC__ -D__CONSOLE__ -D__CAN__ -D__64__ -DSWIG -I${CORE_PATH} -I.. -L${CORE_PATH} \
+  -lc -lpthread -ldl -lperl \
+  elster_perl_wrap.cxx \
+  ../elster_perl.cpp \
+  ../elster_instance.cpp \
+  ../KIpSocket.cpp \
+  ../KThread.cpp \
+  ../KCriticalSection.cpp \
+  ../KRPiCanDriver.cpp \
+  ../KCanDriver.cpp \
+  ../KComm.cpp \
+  ../KCanCommDriver.cpp \
+  ../KCanServer.cpp \
+  ../KStream.cpp \
+  ../NUtils.cpp \
+  ../NCanUtils.cpp \
+  ../KElsterTable.cpp \
+  ../KScanTable.cpp \
+  ../KCanElster.cpp \
+  ../KSniffedFrame.cpp \
+  ../KCanTcpDriver.cpp \
+  ../KTcpClient.cpp \
+  -o elster_perl.dylib
+
+PERL_PATH="/opt/local/lib/perl5/5.22/darwin-thread-multi-2level/CORE"
+FHEM_PATH="/Users/${USER}/fhem-5.8/FHEM"
+
+cp elster_perl.dylib ${FHEM_PATH}
+
+cp elster_perl.pm ${FHEM_PATH}
+  

@@ -1,0 +1,31 @@
+rm can_vz
+
+mysql_flag=""
+if [ -f /usr/include/mysql/mysql.h ]
+then
+  mysql_flag="-D__MYSQL__"
+fi
+
+${CROSS_COMPILE}g++ -Wall $1 $2 -D__LINUX__ -D__ARM__ -D__CAN__ -D__CONSOLE__ -D__VZ__ $mysql_flag -lc -lpthread -ldl \
+  KIpSocket.cpp \
+  KThread.cpp \
+  KCriticalSection.cpp \
+  KCanDriver.cpp \
+  KComm.cpp \
+  KRPiCanDriver.cpp \
+  KCanServer.cpp \
+  KStream.cpp \
+  NUtils.cpp \
+  NCanUtils.cpp \
+  XmlParser.cpp \
+  KXmlNodeList.cpp \
+  KTcpClient.cpp \
+  KHttpClient.cpp \
+  KMySql.cpp \
+  KElsterTable.cpp \
+  KScanTable.cpp \
+  KCanElster.cpp \
+  KCanCommDriver.cpp \
+  KSniffedFrame.cpp \
+  KCanTcpDriver.cpp \
+  -o can_vz

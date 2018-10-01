@@ -1,0 +1,15 @@
+rm elster_php.so
+
+export PHP_PATH=/usr/php-5.6.30-src
+
+swig -php -module elster_php -c++ elster_php.i
+
+${CROSS_COMPILE}g++ -shared -Wall -D__LINUX__ -D__ARM__ -D__CONSOLE__ -D__CAN__ -DSWIG -DZEND_WIN32 \
+  -I${PHP_PATH}/zend -I${PHP_PATH}/TSRM -I${PHP_PATH} -I${PHP_PATH}/main \
+  -lc -lpthread -ldl \
+  elster_php.cpp elster_php_wrap.cpp elster_instance.cpp \
+  KIpSocket.cpp KThread.cpp KCriticalSection.cpp KCanDriver.cpp KComm.cpp KRPiCanDriver.cpp \
+  KCanCommDriver.cpp KCanServer.cpp KStream.cpp NUtils.cpp NCanUtils.cpp KElsterTable.cpp KScanTable.cpp KCanElster.cpp \
+  KCanTcpDriver.cpp KTcpClient.cpp KSniffedFrame.cpp \
+  -o elster_php.so
+  

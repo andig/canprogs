@@ -1,0 +1,33 @@
+
+echo "elster"
+./can_elster.mac
+
+echo "elster_perl"
+./can_elster_perl.mac
+
+echo "logger $1 $2"
+./can_logger.mac $1 $2
+
+echo "scan $1 $2"
+./can_scan.mac $1 $2
+
+echo "server"
+./can_server.mac
+
+echo "simul"
+./can_simul.mac
+
+echo "stiebel_simul"
+./stiebel_simul.mac
+
+echo "vz"
+./can_vz.mac
+
+echo "cs_bruecke"
+./cs_bruecke.mac
+
+echo "usbtin_simul"
+./usbtin_simul.mac
+
+echo "elster_php"
+./can_elster_php.mac

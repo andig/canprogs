@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<VZ>
+  <device     Name="can0" />
+  <template   Name="INSERT data(channel_id, timestamp, value) VALUE(${id}, ${timestamp}, ${value}); " />
+  <mysql User="pi" Password="raspberry" DB="volkszaehler" Host="192.168.1.116" />
+  <!-- sleep in seconds -->
+  <sleep      Name="60" /> 
+  <channel    Name="Rücklaufist" 
+              id="3"           
+              can_val="289.3" 
+              format="et_dec_val" />
+  <channel    Name="Aussentemperatur"
+              id="5"           
+              can_val="181.10" />
+</VZ>

@@ -1,0 +1,37 @@
+rm can_server
+
+${CROSS_COMPILE}g++ -Wall $1 $2 -D__LINUX__ -D__ARM__ -D__CAN__ -D__CONSOLE__ -D__CAN_SERVER__ -lc -lpthread \
+  KIpSocket.cpp \
+  KThread.cpp \
+  KCriticalSection.cpp \
+  KCanDriver.cpp \
+  KComm.cpp \
+  KRPiCanDriver.cpp \
+  KCanServer.cpp \
+  KStream.cpp \
+  NUtils.cpp \
+  NCanUtils.cpp \
+  KCanElster.cpp \
+  KElsterTable.cpp \
+  KTcpClient.cpp \
+  KTcpCanClient.cpp \
+  KTcpServer.cpp \
+  KTcpElsterServer.cpp \
+  KScanTable.cpp \
+  KCanCommDriver.cpp \
+  KSniffedFrame.cpp \
+  KCanTcpDriver.cpp \
+  -o can_server
+
+rm can_client
+
+${CROSS_COMPILE}g++ -Wall $1 $2 -D__LINUX__ -D__ARM__ -D__CAN__ -D__CONSOLE__ -D__CAN_CLIENT__ -lc \
+  KIpSocket.cpp \
+  KStream.cpp \
+  NUtils.cpp \
+  NCanUtils.cpp \
+  KElsterTable.cpp \
+  KTcpClient.cpp \
+  KTcpCanClient.cpp \
+  KTcpElsterServer.cpp \
+  -o can_client

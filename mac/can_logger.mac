@@ -1,0 +1,23 @@
+
+g++ -Wall $1 $2 -D__LINUX__ -D__MAC__ -D__64__ -D__CONSOLE__ -D__CAN__ -D__MYSQL__ -lc -lpthread -ldl \
+  ../CanLogger.cpp \
+  ../KIpSocket.cpp \
+  ../KThread.cpp \
+  ../KCriticalSection.cpp \
+  ../KCanDriver.cpp \
+  ../KComm.cpp \
+  ../KCanCommDriver.cpp \
+  ../KRPiCanDriver.cpp \
+  ../KCanServer.cpp \
+  ../KStream.cpp \
+  ../NUtils.cpp \
+  ../NCanUtils.cpp \
+  ../XmlParser.cpp \
+  ../KXmlNodeList.cpp \
+  ../KMySql.cpp \
+  ../KElsterTable.cpp \
+  ../KCanUVR.cpp \
+  ../KTcpClient.cpp \
+  ../KHttpClient.cpp \
+  ../KCanTcpDriver.cpp \
+  -o can_logger

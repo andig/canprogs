@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="cs_bruecke_dos.exe"/>
+    <OBJFILES value="obj\KElsterTable.obj obj\KIpSocket.obj obj\KScanTable.obj obj\KStream.obj 
+      obj\KThread.obj obj\NCanUtils.obj obj\VStream.obj obj\KCanDriver.obj 
+      obj\KComm.obj obj\KCriticalSection.obj obj\KTcpClient.obj 
+      obj\KCanElster.obj obj\KTcpCanClient.obj obj\UBruecke.obj 
+      obj\KCanServer.obj obj\Kusb2can.obj obj\NUtils.obj obj\KCanCommDriver.obj"/>
+    <RESFILES value="cs_bruecke_dos.res"/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES)"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value=""/>
+    <SPARELIBS value=""/>
+    <PACKAGES value="vcl.bpi rtl.bpi vclx.bpi bcbsmp.bpi dclocx.bpi"/>
+    <PATHCPP value=".;..;..;..;..;..;..;..;..;..;..;..;..;..;..;..;..\special;..;.."/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value="__WINDOWS__;__CAN__;__CONSOLE__;__DEBUG__;__NO_VCL__"/>
+    <SYSDEFINES value="NO_STRICT;_NO_VCL;_RTLDLL;USEPACKAGES"/>
+    <MAINSOURCE value="cs_bruecke_dos.bpf"/>
+    <INCLUDEPATH value="..\;..;..\special;$(BCB)\include;$(BCB)\include\vcl"/>
+    <LIBPATH value="..\;..;..\special;$(BCB)\lib\obj;$(BCB)\lib"/>
+    <WARNINGS value="-w-par"/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <CFLAG1 value="-O2 -Vx -Ve -X- -a8 -b- -k- -vi -tWC -tWM -c"/>
+    <PFLAGS value="-N2obj -N0obj -$Y- -$L- -$D- -$A8 -v -JPHNE -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zd"/>
+    <LFLAGS value="-Iobj -D&quot;&quot; -ap -Tpe -x -Gn"/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0x32.obj $(PACKAGES) $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cw32mti.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="cs_bruecke_dos.res" FORMNAME="" UNITNAME="cs_bruecke_dos.res" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cs_bruecke_dos.bpf" FORMNAME="" UNITNAME="cs_bruecke_dos" CONTAINERID="BPF" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\KElsterTable.cpp" FORMNAME="" UNITNAME="KElsterTable.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\KIpSocket.cpp" FORMNAME="" UNITNAME="KIpSocket.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\KScanTable.cpp" FORMNAME="" UNITNAME="KScanTable.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\KStream.cpp" FORMNAME="" UNITNAME="KStream.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\KThread.cpp" FORMNAME="" UNITNAME="KThread.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\NCanUtils.cpp" FORMNAME="" UNITNAME="NCanUtils.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\VStream.cpp" FORMNAME="" UNITNAME="VStream.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\KCanDriver.cpp" FORMNAME="" UNITNAME="KCanDriver.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\KComm.cpp" FORMNAME="" UNITNAME="KComm.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\KCriticalSection.cpp" FORMNAME="" UNITNAME="KCriticalSection.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\KTcpClient.cpp" FORMNAME="" UNITNAME="KTcpClient.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\KCanElster.cpp" FORMNAME="" UNITNAME="KCanElster.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\KTcpCanClient.cpp" FORMNAME="" UNITNAME="KTcpCanClient.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\UBruecke.cpp" FORMNAME="" UNITNAME="UBruecke" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\KCanServer.cpp" FORMNAME="" UNITNAME="KCanServer" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\special\Kusb2can.cpp" FORMNAME="" UNITNAME="Kusb2can" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\NUtils.cpp" FORMNAME="" UNITNAME="NUtils" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\KCanCommDriver.cpp" FORMNAME="" UNITNAME="KCanCommDriver" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=0
+AutoIncBuild=0
+MajorVer=1
+MinorVer=0
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=2055
+CodePage=1252
+
+[Version Info Keys]
+CompanyName=
+FileDescription=
+FileVersion=1.0.0.0
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+Comments=
+
+[HistoryLists\hlIncludePath]
+Count=3
+Item0=..\;..\special;..;$(BCB)\include;$(BCB)\include\vcl
+Item1=..\special;..\;..;$(BCB)\include;$(BCB)\include\vcl
+Item2=..\;D:\CC\framework\can_progs;$(BCB)\include;$(BCB)\include\vcl
+
+[HistoryLists\hlLibraryPath]
+Count=3
+Item0=..\;..\special;..;$(BCB)\lib\obj;$(BCB)\lib
+Item1=..\special;..\;..;$(BCB)\lib\obj;$(BCB)\lib
+Item2=..\;D:\CC\framework\can_progs;$(BCB)\lib\obj;$(BCB)\lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlConditionals]
+Count=3
+Item0=__WINDOWS__;__CAN__;__CONSOLE__;__DEBUG__;__NO_VCL__
+Item1=_DEBUG;__WINDOWS__;__CAN__;__CONSOLE__;__DEBUG__;__NO_VCL__
+Item2=_DEBUG
+
+[HistoryLists\hlIntOutputDir]
+Count=1
+Item0=obj
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=COM8 ED000200 trace
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+  </IDEOPTIONS>
+</PROJECT>

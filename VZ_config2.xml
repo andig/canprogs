@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<VZ>
+  <!-- supported formats (ElsterTable.inc):
+           et_dec_val       signed short / 10.0 (Auflösung: xx.x)
+           et_byte          signed char
+           et_little_endian
+           et_zeit
+           et_datum
+  -->
+  <device     Name="can0" />
+  <mysql      User="pi" 
+              Password="raspberry" 
+              DB="volkszaehler" />
+  <ip_address Name="192.168.1.116" /> 
+  <!-- sleep in seconds -->
+  <sleep      Name="54" /> 
+  <channel    Name="Rücklaufist"
+              query="INSERT data(channel_id, timestamp, value) VALUES(1, unix_timestamp(&quot;${ts}&quot;), ${value});"           
+              can_msg="31 00 fa 00 16" 
+              format="et_dec_val" /> 
+  <channel    Name="Aussentemperatur"
+              query="INSERT data(channel_id, timestamp, value) VALUES(3, unix_timestamp(&quot;${ts}&quot;), ${value});"           
+              can_msg="31 00 fa 00 0c" 
+              format="et_dec_val" /> 
+  <channel    Name="Verdichter"
+              query="INSERT data(channel_id, timestamp, value) VALUES(2, unix_timestamp(&quot;${ts}&quot;), ${value});"           
+              can_msg="a1 00 fa 07 a8" 
+              format="et_dec_val" /> 
+</VZ>

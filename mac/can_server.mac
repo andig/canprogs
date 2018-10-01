@@ -1,0 +1,34 @@
+g++ -Wall $1 $2 -D__LINUX__ -D__MAC__ -D__CAN__ -D__CONSOLE__ -D__CAN_SERVER__ -lc -lpthread \
+  ../KIpSocket.cpp \
+  ../KThread.cpp \
+  ../KCriticalSection.cpp \
+  ../KCanDriver.cpp \
+  ../KComm.cpp \
+  ../KCanCommDriver.cpp \
+  ../KRPiCanDriver.cpp \
+  ../KCanServer.cpp \
+  ../KStream.cpp \
+  ../NUtils.cpp \
+  ../NCanUtils.cpp \
+  ../KCanElster.cpp \
+  ../KElsterTable.cpp \
+  ../KTcpClient.cpp \
+  ../KTcpCanClient.cpp \
+  ../KTcpServer.cpp \
+  ../KTcpElsterServer.cpp \
+  ../KScanTable.cpp \
+  ../KSniffedFrame.cpp \
+  ../KCanTcpDriver.cpp \
+  -o can_server
+
+
+g++ -Wall $1 $2 -D__LINUX__ -D__MAC__ -D__CAN__ -D__CONSOLE__ -D__CAN_CLIENT__ -lc \
+  ../KIpSocket.cpp \
+  ../KStream.cpp \
+  ../NUtils.cpp \
+  ../KElsterTable.cpp \
+  ../NCanUtils.cpp \
+  ../KTcpClient.cpp \
+  ../KTcpCanClient.cpp \
+  ../KTcpElsterServer.cpp \
+  -o can_client

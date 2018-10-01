@@ -1,0 +1,10 @@
+
+g++ -Wall $1 $2 -D__LINUX__ -D__MAC__ -D__64__ -D__CONSOLE__ -D__CAN__ -lc -lpthread \
+  ../KStream.cpp \
+  ../NUtils.cpp \
+  ../NCanUtils.cpp \
+  ../KElsterTable.cpp \
+  ../KScanTable.cpp \
+  ../KCanLogFile.cpp \
+  ../special/log_to_scan.cpp \
+  -o log_to_scan

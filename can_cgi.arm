@@ -1,0 +1,25 @@
+rm can_cgi
+
+${CROSS_COMPILE}g++ -Wall $1 $2 -D__LINUX__ -D__ARM__ -D__CAN__ -D__CGI__ -lc -lpthread \
+  KIpSocket.cpp \
+  KThread.cpp \
+  KCriticalSection.cpp \
+  KCanDriver.cpp \
+  KComm.cpp \
+  KRPiCanDriver.cpp \
+  KCanServer.cpp \
+  KStream.cpp \
+  NUtils.cpp \
+  NCanUtils.cpp \
+  KElsterTable.cpp \
+  KScanTable.cpp \
+  KCanElster.cpp \
+  NCgi.cpp \
+  KCanCommDriver.cpp \
+  KSniffedFrame.cpp \
+  KCanTcpDriver.cpp \
+  KTcpClient.cpp \
+  -o can_cgi
+
+chmod a+x can_cgi
+# cp can_cgi /home/pi/cgi-bin/can_cgi

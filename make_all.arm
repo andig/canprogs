@@ -1,0 +1,25 @@
+echo "elster"
+./can_elster.arm
+
+echo "elster_perl"
+./can_elster_perl.arm
+
+echo "logger $1 $2"
+./can_logger.arm $1 $2
+
+echo "scan $1 $2"
+./can_scan.arm $1 $2
+
+echo "server"
+./can_server.arm
+
+echo "vz"
+./can_vz.arm
+
+echo "cgi"
+./can_cgi.arm
+
+echo "elster_php"
+./can_elster_php.arm
+
+

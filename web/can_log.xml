@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<can_log>
+  <device     Name="can0" />
+  <mysql_put  Name="Uxxxxx=Vxxxxxx" />
+  <ip_address Name="192.168.111.12" />
+  <!-- sleep in seconds -->
+  <sleep      Name="93" />
+</can_log>
